@@ -20,6 +20,6 @@
         "squizlabs/php_codesniffer": "*"
     },
     "scripts": {
-        "post-install-cmd": ["mkdir -p .git/hooks", "rm -rf .git/hooks", "ln -s ../hooks .git/hooks"]
+        "post-install-cmd": ["mkdir -p .git/hooks", "rm -rf .git/hooks", "ln -s ../../../vendor/codzo/phpcodesniffer-git-hook/hooks .git/hooks"]
     }
 }
