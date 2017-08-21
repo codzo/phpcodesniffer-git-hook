@@ -1,0 +1,25 @@
+{
+	"name": "codzo/phpcodesniffer-git-hook",
+    "type": "tool",
+    "description": "GIT hook for PHP-Codesniffer",
+    "keywords": ["git", "hook", "php","codesniffer"],
+    "homepage": "https://github.com/codzo/phpcodesniffer-git-hook",
+    "license": "Apache License",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Neil Fan",
+            "email": "neil.fan@codzo.com",
+            "homepage": "http://codzo.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "squizlabs/php_codesniffer": "*"
+    },
+    "scripts": {
+        "post-install-cmd": ["mkdir -p .git/hooks", "rm -rf .git/hooks", "ln -s ../hooks .git/hooks"]
+    }
+}
