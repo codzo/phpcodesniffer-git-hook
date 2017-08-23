@@ -21,7 +21,7 @@
     "scripts": {
         "post-install-cmd": [
             "rm -rf .git/hooks",
-            "ln -s ../../../vendor/codzo/phpcodesniffer-git-hook/hooks .git/hooks"
+            "ln -s ../vendor/codzo/phpcodesniffer-git-hook/hooks .git/hooks"
         ]
     }
 }
