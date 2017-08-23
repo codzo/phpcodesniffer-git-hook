@@ -1,5 +1,5 @@
 {
-	"name": "codzo/phpcodesniffer-git-hook",
+    "name": "codzo/phpcodesniffer-git-hook",
     "type": "tool",
     "description": "GIT hook for PHP-Codesniffer",
     "keywords": ["git", "hook", "php","codesniffer"],
