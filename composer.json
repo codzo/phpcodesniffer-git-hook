@@ -4,7 +4,7 @@
     "description": "GIT hook for PHP-Codesniffer",
     "keywords": ["git", "hook", "php","codesniffer"],
     "homepage": "https://github.com/codzo/phpcodesniffer-git-hook",
-    "license": "MIT License",
+    "license": "MIT",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "authors": [
