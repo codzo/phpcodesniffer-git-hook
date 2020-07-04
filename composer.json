@@ -19,9 +19,14 @@
         "squizlabs/php_codesniffer": "*"
     },
     "scripts": {
+        "apply-global": [
+            "git config --global core.hooksPath \"`git rev-parse --show-toplevel`/hooks\""
+        ],
         "post-install-cmd": [
-            "rm -rf .git/hooks",
-            "ln -s ../vendor/codzo/phpcodesniffer-git-hook/hooks .git/hooks"
+            "@apply-global"
+        ],
+        "post-update-cmd": [
+            "@apply-global"
         ]
     }
 }
