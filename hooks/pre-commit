@@ -1,5 +1,6 @@
 #!/bin/sh
  
+SCRIPTPATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 PROJECT=`git rev-parse --show-toplevel`
 STAGED_FILES_CMD=`git diff --cached --name-only --diff-filter=ACMR HEAD | grep \\\\.php`
  
@@ -29,14 +30,14 @@ done
 if [ "$FILES" != "" ]
 then
 	echo "Running Code Sniffer..."
-	./vendor/bin/phpcs --standard=PSR2 --encoding=utf-8 -n -p $FILES
+	$SCRIPTPATH/../vendor/bin/phpcs --standard=PSR12 --encoding=utf-8 -n -p $FILES
 	if [ $? != 0 ]
 	then
 		echo "Coding standards errors have been detected. Running phpcbf..."
-		./vendor/bin/phpcbf --standard=PSR2 --encoding=utf-8 -n -p $FILES
+		$SCRIPTPATH/../vendor/bin/phpcbf --standard=PSR12 --encoding=utf-8 -n -p $FILES
 		git add $FILES
 		echo "Running Code Sniffer again..."
-		./vendor/bin/phpcs --standard=PSR2 --encoding=utf-8 -n -p $FILES
+		$SCRIPTPATH/../vendor/bin/phpcs --standard=PSR12 --encoding=utf-8 -n -p $FILES
 		if [ $? != 0 ]
 		then
 			echo "Errors found not fixable automatically"
