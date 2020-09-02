@@ -11,6 +11,7 @@ Clone the project, then run following code in this repo directory.
 ```bash
 composer install
 ```
+During the process a new git hook will be applied globally.
 
 ## Features
-Once installed, `git commit` command will trigger the check of codesniffer. If it's something codesniffer can fix it will fix the problem automatically.
+Once installed, `git commit` command will trigger the check of codesniffer on your repo. If it's something codesniffer can fix it will fix the problem automatically.
