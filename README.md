@@ -12,10 +12,5 @@ Clone the project, then run following code in this repo directory.
 composer install
 ```
 
-When all dependencies installed, run following code to apply new hooks
-```bash
-git config --global core.hooksPath /path/to/phpcodesniffer-git-hook/hooks
-```
-
 ## Features
 Once installed, `git commit` command will trigger the check of codesniffer. If it's something codesniffer can fix it will fix the problem automatically.
