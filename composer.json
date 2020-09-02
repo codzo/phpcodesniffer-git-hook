@@ -22,6 +22,15 @@
         "apply-global": [
             "git config --global core.hooksPath \"`git rev-parse --show-toplevel`/hooks\""
         ],
+        "apply-local": [
+            "git config core.hooksPath \"`git rev-parse --show-toplevel`/hooks\""
+        ],
+        "post-package-install": [
+            "@apply-local"
+        ],
+        "post-package-update": [
+            "@apply-local"
+        ],
         "post-install-cmd": [
             "@apply-global"
         ],
