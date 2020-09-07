@@ -15,18 +15,21 @@
             "role": "Developer"
         }
     ],
+    "autoload": {
+        "psr-0": {
+            "Codzo\\PHPCodeSnifferGitHook": "src/"
+        }
+    },
     "require": {
         "squizlabs/php_codesniffer": "*"
     },
     "scripts": {
-        "apply-global": [
-            "git config --global core.hooksPath \"`git rev-parse --show-toplevel`/hooks\""
-        ],
+        "apply-phpcs-hook": "Codzo\\PHPCodeSnifferGitHook\\Installer::applyPHPCSHook",
         "post-install-cmd": [
-            "@apply-global"
+            "@apply-phpcs-hook"
         ],
         "post-update-cmd": [
-            "@apply-global"
+            "@apply-phpcs-hook"
         ]
     }
 }
